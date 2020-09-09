@@ -1,0 +1,114 @@
+<script>
+  import { onMount } from 'svelte';
+
+  export let segment;
+
+  let icon = 'assets/menu.png';
+  let alt = 'menu';
+
+  function showHideMenu() {
+    if (alt === 'menu') {
+      document.getElementById('menu').style.display = 'block';
+      icon = 'assets/close.png';
+      alt = 'close';
+    } else {
+      document.getElementById('menu').style.display = 'none';
+      icon = 'assets/menu.png';
+      alt = 'menu';
+    }
+  }
+
+  onMount(() => {
+    document.addEventListener(
+      'click',
+      e => {
+        let img = document.getElementById('icon');
+        let menu = document.getElementById('menu');
+
+        if (alt === 'close' && img != e.target && menu != e.target) {
+          menu.style.display = 'none';
+          icon = 'assets/menu.png';
+          alt = 'menu';
+        }
+      },
+      false
+    );
+  });
+</script>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.75rem 1.5rem;
+    position: relative;
+  }
+
+  a {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+    padding: 2rem;
+    background-color: white;
+    position: absolute;
+    top: 68px;
+    right: 0;
+    left: 0;
+  }
+
+  ul {
+    list-style: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  }
+
+  li a {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: black;
+  }
+
+  nav > a {
+    width: 100%;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    background-color: black;
+    color: white;
+  }
+
+  [aria-current] {
+    color: rgba(0, 0, 0, 0.25);
+  }
+</style>
+
+<header>
+  <a href="."><img src="assets/logo.png" alt="logo" /></a>
+  <img id="icon" on:click={showHideMenu} src={icon} {alt} />
+  <nav id="menu">
+    <ul>
+      <li>
+        <a
+          rel="prefetch"
+          aria-current={segment === 'stories' ? 'page' : undefined}
+          href="stories">Stories</a>
+      </li>
+      <li>
+        <a aria-current={segment === 'features' ? 'page' : undefined} href="features">Features</a>
+      </li>
+      <li>
+        <a aria-current={segment === 'pricing' ? 'page' : undefined} href="pricing">Pricing</a>
+      </li>
+    </ul>
+    <a href="pricing">Get an invite</a>
+  </nav>
+</header>
