@@ -6,6 +6,7 @@ const contents = JSON.stringify(
       title: story.title,
       author: story.author,
       createdAt: story.createdAt,
+      time: story.time,
       img: story.img,
     };
   })

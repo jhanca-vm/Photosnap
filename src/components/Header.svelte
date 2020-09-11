@@ -3,17 +3,17 @@
 
   export let segment;
 
-  let icon = 'assets/menu.png';
+  let icon = 'assets/shared/mobile/menu.svg';
   let alt = 'menu';
 
   function showHideMenu() {
     if (alt === 'menu') {
       document.getElementById('menu').style.display = 'block';
-      icon = 'assets/close.png';
+      icon = 'assets/shared/mobile/close.svg';
       alt = 'close';
     } else {
       document.getElementById('menu').style.display = 'none';
-      icon = 'assets/menu.png';
+      icon = 'assets/shared/mobile/menu.svg';
       alt = 'menu';
     }
   }
@@ -27,7 +27,7 @@
 
         if (alt === 'close' && img != e.target && menu != e.target) {
           menu.style.display = 'none';
-          icon = 'assets/menu.png';
+          icon = 'assets/shared/mobile/menu.svg';
           alt = 'menu';
         }
       },
@@ -92,7 +92,7 @@
 </style>
 
 <header>
-  <a href="."><img src="assets/logo.png" alt="logo" /></a>
+  <a href="."><img src="assets/shared/desktop/logo.svg" alt="logo" /></a>
   <img id="icon" on:click={showHideMenu} src={icon} {alt} />
   <nav id="menu">
     <ul>
