@@ -1,5 +1,23 @@
+<script context="module">
+  export function preload({ params, query }) {
+    return this.fetch(`index.json`)
+      .then(r => r.json())
+      .then(data => {
+        return { data };
+      });
+  }
+</script>
+
 <script>
   import Hero from '../components/Hero.svelte';
+  import Descriptions from '../components/Descriptions.svelte';
+  import StoryPreview from '../components/StoryPreview.svelte';
+  import Features from '../components/Features.svelte';
+
+  export let data;
+
+  let stories = data.stories;
+  let features = data.features;
 
   let img = {
     mobile: 'assets/home/mobile/create-and-share.jpg',
@@ -24,4 +42,9 @@
 
 <main>
   <Hero {img} {title} {description} {link} />
+  <Descriptions />
+  {#each stories as story}
+    <StoryPreview {...story} />
+  {/each}
+  <Features {features} />
 </main>

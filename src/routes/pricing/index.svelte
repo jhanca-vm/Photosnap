@@ -1,5 +1,19 @@
+<script context="module">
+  export function preload({ params, query }) {
+    return this.fetch(`pricing.json`)
+      .then(r => r.json())
+      .then(plans => {
+        return { plans };
+      });
+  }
+</script>
+
 <script>
-  import Hero from '../components/Hero.svelte';
+  import Hero from '../../components/Hero.svelte';
+  import Plans from '../../components/Plans.svelte';
+  import PlansDescription from '../../components/PlansDescription.svelte';
+
+  export let plans;
 
   let img = {
     mobile: 'assets/pricing/mobile/hero.jpg',
@@ -19,4 +33,6 @@
 
 <main>
   <Hero {img} {title} {description} link="none" />
+  <Plans />
+  <PlansDescription {plans} />
 </main>

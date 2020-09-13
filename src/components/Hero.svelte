@@ -38,6 +38,10 @@
     color: white;
   }
 
+  div a:hover {
+    text-decoration: underline;
+  }
+
   div a svg {
     margin-left: 1.25rem;
   }

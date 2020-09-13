@@ -1,4 +1,5 @@
 <script>
+  import Footer from '../components/Footer.svelte';
   import Header from '../components/Header.svelte';
 
   export let segment;
@@ -15,7 +16,7 @@
     font-size: 15px;
   }
 
-  :global(h1) {
+  :global(h1, h2) {
     font-size: 32px;
     text-transform: uppercase;
     letter-spacing: 3.33px;
@@ -43,3 +44,4 @@
 
 <Header {segment} />
 <slot />
+<Footer {segment} />

@@ -43,6 +43,11 @@
     color: white;
   }
 
+  button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
   button svg {
     margin-left: 1.25rem;
   }

@@ -71,6 +71,11 @@
     text-transform: uppercase;
     letter-spacing: 2.5px;
     color: black;
+    cursor: pointer;
+  }
+
+  li a:hover {
+    color: rgba(0, 0, 0, 0.3);
   }
 
   nav > a {
@@ -86,13 +91,18 @@
     color: white;
   }
 
+  nav > a:hover {
+    background-color: #dfdfdf;
+    color: black;
+  }
+
   [aria-current] {
-    color: rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.3);
   }
 </style>
 
 <header>
-  <a href="."><img src="assets/shared/desktop/logo.svg" alt="logo" /></a>
+  <a rel="prefetch" href="."><img src="assets/shared/desktop/logo.svg" alt="logo" /></a>
   <img id="icon" on:click={showHideMenu} src={icon} {alt} />
   <nav id="menu">
     <ul>
@@ -103,12 +113,18 @@
           href="stories">Stories</a>
       </li>
       <li>
-        <a aria-current={segment === 'features' ? 'page' : undefined} href="features">Features</a>
+        <a
+          rel="prefetch"
+          aria-current={segment === 'features' ? 'page' : undefined}
+          href="features">Features</a>
       </li>
       <li>
-        <a aria-current={segment === 'pricing' ? 'page' : undefined} href="pricing">Pricing</a>
+        <a
+          rel="prefetch"
+          aria-current={segment === 'pricing' ? 'page' : undefined}
+          href="pricing">Pricing</a>
       </li>
     </ul>
-    <a href="pricing">Get an invite</a>
+    <a rel="prefetch" href="pricing">Get an invite</a>
   </nav>
 </header>

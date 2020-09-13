@@ -21,11 +21,6 @@
     top: 0;
   }
 
-  div h2 {
-    font-size: 32px;
-    text-transform: uppercase;
-  }
-
   div a {
     display: flex;
     align-items: center;
@@ -35,6 +30,10 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     color: white;
+  }
+
+  div a:hover {
+    text-decoration: underline;
   }
 
   div svg {
