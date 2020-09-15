@@ -24,6 +24,39 @@
     left: 0;
   }
 
+  article {
+    padding: 3rem 1.25rem;
+    text-align: center;
+  }
+
+  article > span {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.25rem;
+  }
+
+  article span span {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 4.17px;
+  }
+
+  article button {
+    width: 87%;
+    height: 40px;
+    margin-top: 2.25rem;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+
+  article button:hover {
+    background-color: #dfdfdf;
+    color: black;
+  }
+
   .light-card {
     background-color: #f5f5f5;
   }
@@ -45,42 +78,48 @@
     color: black;
   }
 
-  .light-card,
-  .dark-card {
-    padding: 3rem 1.25rem;
-    text-align: center;
+  @media only screen and (min-width: 640px) {
+    section {
+      padding: 5rem 1.5rem;
+    }
+
+    article {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 3rem 2.25rem;
+      text-align: left;
+    }
+
+    article > span {
+      grid-column: 2;
+      grid-row: 1;
+      margin: 0;
+      text-align: right;
+    }
+
+    article p {
+      max-width: 270px;
+      margin-top: -25px;
+    }
+
+    article button {
+      max-width: 270px;
+      grid-column: 1;
+    }
+
+    .horizontal {
+      display: none;
+    }
   }
 
-  .light-card > span,
-  .dark-card > span {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2.25rem;
-  }
+  @media only screen and (min-width: 768px) {
+    section {
+      padding: 5rem 2rem;
+    }
 
-  .light-card span span,
-  .dark-card span span {
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 4.17px;
-  }
-
-  .light-card button,
-  .dark-card button {
-    width: 87%;
-    height: 40px;
-    margin-top: 2.25rem;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
-  }
-
-  .light-card button:hover,
-  .dark-card button:hover {
-    background-color: #dfdfdf;
-    color: black;
+    .dark-card {
+      margin: 1.75rem 0;
+    }
   }
 </style>
 
@@ -93,7 +132,7 @@
     <button>Pick plan</button>
   </article>
   <article class="dark-card">
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="6">
+    <svg class="horizontal" width="100%" height="6">
       <defs>
         <linearGradient id="180ta" x1="0" x2="159" y1="6" y2="0" gradientUnits="userSpaceOnUse">
           <stop offset="0" stop-color="#ffc593" />
@@ -104,6 +143,20 @@
       <g>
         <g>
           <path fill="url(#180ta)" d="M0 0h600v6H0z" />
+        </g>
+      </g>
+    </svg>
+    <svg class="vertical" width="6" height="100%">
+      <defs>
+        <linearGradient id="ubcja" x1="0" x2="3" y1="304" y2="0" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#ffc593" />
+          <stop offset=".52" stop-color="#bc7198" />
+          <stop offset="1" stop-color="#5a77ff" />
+        </linearGradient>
+      </defs>
+      <g>
+        <g>
+          <path fill="url(#ubcja)" d="M0 0h6v800H0z" />
         </g>
       </g>
     </svg>

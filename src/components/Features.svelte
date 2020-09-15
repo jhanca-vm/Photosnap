@@ -1,18 +1,15 @@
 <script>
   export let features;
+  export let home;
 </script>
 
 <style>
-  section {
-    padding: 4.75rem 2.25rem;
-    text-align: center;
-  }
-
   div {
+    max-width: 457px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 4.25rem;
+    margin: 0 auto 4.25rem;
   }
 
   div:last-of-type {
@@ -28,14 +25,24 @@
     line-height: 25px;
     opacity: 0.6;
   }
+
+  @media only screen and (min-width: 640px) {
+    div {
+      margin: 0 auto 4.75rem;
+    }
+
+    .reset {
+      margin: 0;
+      align-self: center;
+      justify-self: center;
+    }
+  }
 </style>
 
-<section>
-  {#each features as { title, description, img }}
-    <div>
-      <figure><img src={img} alt={title} /></figure>
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
-  {/each}
-</section>
+{#each features as { title, description, img }}
+  <div class:reset={home === false}>
+    <figure><img src={img} alt={title} /></figure>
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </div>
+{/each}

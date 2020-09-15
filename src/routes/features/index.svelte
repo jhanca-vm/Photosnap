@@ -27,12 +27,37 @@
     'We make sure all of our features are designed to be loved by every aspiring and even professional photograpers who wanted to share their features.';
 </script>
 
+<style>
+  section {
+    padding: 4.75rem 2.25rem;
+    text-align: center;
+  }
+
+  @media only screen and (min-width: 640px) {
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1rem;
+      row-gap: 4rem;
+      padding: 5.75rem 1.5rem 6rem;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    section {
+      padding: 5.75rem 2rem 6rem;
+    }
+  }
+</style>
+
 <svelte:head>
   <title>Photosnap | Features</title>
 </svelte:head>
 
 <main>
   <Hero {img} {title} {description} link="none" />
-  <Features {features} />
+  <section>
+    <Features {features} home={false} />
+  </section>
   <CallToAction />
 </main>

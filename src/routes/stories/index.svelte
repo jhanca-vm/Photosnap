@@ -15,6 +15,15 @@
   export let stories;
 </script>
 
+<style>
+  @media only screen and (min-width: 640px) {
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
+
 <svelte:head>
   <title>Photosnap | Stories</title>
 </svelte:head>
@@ -23,7 +32,7 @@
   <MainStory />
   <section>
     {#each stories as story}
-      <StoryPreview {...story} />
+      <StoryPreview {...story} home={false} />
     {/each}
   </section>
 </main>

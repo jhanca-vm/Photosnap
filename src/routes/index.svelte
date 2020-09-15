@@ -36,6 +36,24 @@
     'Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.';
 </script>
 
+<style>
+  .features {
+    padding: 4.75rem 2.25rem;
+    text-align: center;
+  }
+
+  @media only screen and (min-width: 640px) {
+    .stories {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .features {
+      padding: 5.75rem 0rem;
+    }
+  }
+</style>
+
 <svelte:head>
   <title>Photosnap</title>
 </svelte:head>
@@ -43,8 +61,12 @@
 <main>
   <Hero {img} {title} {description} {link} />
   <Descriptions />
-  {#each stories as story}
-    <StoryPreview {...story} />
-  {/each}
-  <Features {features} />
+  <section class="stories">
+    {#each stories as story}
+      <StoryPreview {...story} home={true} />
+    {/each}
+  </section>
+  <section class="features">
+    <Features {features} home={true} />
+  </section>
 </main>

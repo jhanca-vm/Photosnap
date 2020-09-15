@@ -6,7 +6,6 @@ const stories = [
     time: '2020-04-16',
     img: {
       mobile: 'assets/stories/mobile/mountains.jpg',
-      tablet: 'assets/stories/tablet/mountains.jpg',
       desktop: 'assets/stories/desktop/mountains.jpg',
     },
   },
@@ -17,7 +16,6 @@ const stories = [
     time: '2020-04-14',
     img: {
       mobile: 'assets/stories/mobile/cityscapes.jpg',
-      tablet: 'assets/stories/tablet/cityscapes.jpg',
       desktop: 'assets/stories/desktop/cityscapes.jpg',
     },
   },
@@ -28,7 +26,6 @@ const stories = [
     time: '2020-04-11',
     img: {
       mobile: 'assets/stories/mobile/18-days-voyage.jpg',
-      tablet: 'assets/stories/tablet/18-days-voyage.jpg',
       desktop: 'assets/stories/desktop/18-days-voyage.jpg',
     },
   },
@@ -39,7 +36,6 @@ const stories = [
     time: '2020-04-09',
     img: {
       mobile: 'assets/stories/mobile/architecturals.jpg',
-      tablet: 'assets/stories/tablet/architecturals.jpg',
       desktop: 'assets/stories/desktop/architecturals.jpg',
     },
   },
@@ -50,7 +46,6 @@ const stories = [
     time: '2020-04-07',
     img: {
       mobile: 'assets/stories/mobile/world-tour.jpg',
-      tablet: 'assets/stories/tablet/world-tour.jpg',
       desktop: 'assets/stories/desktop/world-tour.jpg',
     },
   },
@@ -61,7 +56,6 @@ const stories = [
     time: '2020-04-03',
     img: {
       mobile: 'assets/stories/mobile/unforeseen-corners.jpg',
-      tablet: 'assets/stories/tablet/unforeseen-corners.jpg',
       desktop: 'assets/stories/desktop/unforeseen-corners.jpg',
     },
   },
@@ -72,7 +66,6 @@ const stories = [
     time: '2020-03-29',
     img: {
       mobile: 'assets/stories/mobile/king-on-africa.jpg',
-      tablet: 'assets/stories/tablet/king-on-africa.jpg',
       desktop: 'assets/stories/desktop/king-on-africa.jpg',
     },
   },
@@ -83,7 +76,6 @@ const stories = [
     time: '2020-03-21',
     img: {
       mobile: 'assets/stories/mobile/trip-to-nowhere.jpg',
-      tablet: 'assets/stories/tablet/trip-to-nowhere.jpg',
       desktop: 'assets/stories/desktop/trip-to-nowhere.jpg',
     },
   },
@@ -94,7 +86,6 @@ const stories = [
     time: '2020-03-19',
     img: {
       mobile: 'assets/stories/mobile/rage-of-the-sea.jpg',
-      tablet: 'assets/stories/tablet/rage-of-the-sea.jpg',
       desktop: 'assets/stories/desktop/rage-of-the-sea.jpg',
     },
   },
@@ -105,7 +96,6 @@ const stories = [
     time: '2020-03-16',
     img: {
       mobile: 'assets/stories/mobile/running-free.jpg',
-      tablet: 'assets/stories/tablet/running-free.jpg',
       desktop: 'assets/stories/desktop/running-free.jpg',
     },
   },
@@ -116,7 +106,6 @@ const stories = [
     time: '2020-03-11',
     img: {
       mobile: 'assets/stories/mobile/behind-the-waves.jpg',
-      tablet: 'assets/stories/tablet/behind-the-waves.jpg',
       desktop: 'assets/stories/desktop/behind-the-waves.jpg',
     },
   },
@@ -127,7 +116,6 @@ const stories = [
     time: '2020-03-09',
     img: {
       mobile: 'assets/stories/mobile/calm-waters.jpg',
-      tablet: 'assets/stories/tablet/calm-waters.jpg',
       desktop: 'assets/stories/desktop/calm-waters.jpg',
     },
   },
@@ -138,7 +126,6 @@ const stories = [
     time: '2020-03-05',
     img: {
       mobile: 'assets/stories/mobile/milky-way.jpg',
-      tablet: 'assets/stories/tablet/milky-way.jpg',
       desktop: 'assets/stories/desktop/milky-way.jpg',
     },
   },
@@ -149,7 +136,6 @@ const stories = [
     time: '2020-03-04',
     img: {
       mobile: 'assets/stories/mobile/dark-forest.jpg',
-      tablet: 'assets/stories/tablet/dark-forest.jpg',
       desktop: 'assets/stories/desktop/dark-forest.jpg',
     },
   },
@@ -160,7 +146,6 @@ const stories = [
     time: '2020-03-01',
     img: {
       mobile: 'assets/stories/mobile/somwarpet.jpg',
-      tablet: 'assets/stories/tablet/somwarpet.jpg',
       desktop: 'assets/stories/desktop/somwarpet.jpg',
     },
   },
@@ -171,7 +156,6 @@ const stories = [
     time: '2020-02-25',
     img: {
       mobile: 'assets/stories/mobile/land-of-dreams.jpg',
-      tablet: 'assets/stories/tablet/land-of-dreams.jpg',
       desktop: 'assets/stories/desktop/land-of-dreams.jpg',
     },
   },

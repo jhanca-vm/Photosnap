@@ -25,6 +25,10 @@
 
   span {
     display: flex;
+  }
+
+  span p,
+  time {
     font-size: 13px;
   }
 
@@ -51,11 +55,39 @@
   button svg {
     margin-left: 1.25rem;
   }
+
+  @media only screen and (min-width: 640px) {
+    section {
+      position: relative;
+    }
+
+    div {
+      max-width: 435px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: initial;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+
+    div h1 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    div {
+      max-width: 445px;
+      padding: 0rem 2rem;
+    }
+  }
 </style>
 
 <section>
   <picture>
-    <source srcset="assets/stories/desktop/moon-of-appalacia.jpg" media="(min-width: 1024px)" />
+    <source srcset="assets/stories/desktop/moon-of-appalacia.jpg" media="(min-width: 1280px)" />
     <source srcset="assets/stories/tablet/moon-of-appalacia.jpg" media="(min-width: 640px)" />
     <img src="assets/stories/mobile/moon-of-appalacia.jpg" alt="moon of appalachia" />
   </picture>
@@ -71,7 +103,7 @@
       not high, the terrain is extremely rugged.
     </p>
     <button>
-      Read the story <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
+      Read the story <svg width="43" height="14">
         <g fill="none" fill-rule="evenodd" stroke="#efefef">
           <path d="M0 7h41.864M35.428 1l6 6-6 6" />
         </g>

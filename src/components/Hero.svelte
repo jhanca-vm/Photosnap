@@ -13,13 +13,8 @@
     position: relative;
   }
 
-  div > svg {
-    position: absolute;
-    top: 0;
-  }
-
   div h1 {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
   }
 
   div p {
@@ -45,16 +40,63 @@
   div a svg {
     margin-left: 1.25rem;
   }
+
+  .horizontal {
+    position: absolute;
+    top: 0;
+  }
+
+  .vertical {
+    display: none;
+  }
+
+  @media only screen and (min-width: 640px) {
+    section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4.75rem 2.5rem 4.5rem;
+      grid-column: 1 / span 2;
+      grid-row: 1;
+    }
+
+    .vertical {
+      display: block;
+      position: absolute;
+      left: 0;
+    }
+
+    .horizontal {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    div {
+      padding: 4.75rem 3rem 4.5rem;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    div {
+      padding: 4.75rem 3.25rem 4.5rem;
+    }
+  }
 </style>
 
 <section>
   <picture>
-    <source srcset={img.desktop} media="(min-width: 1024px)" />
+    <source srcset={img.desktop} media="(min-width: 1280px)" />
     <source srcset={img.tablet} media="(min-width: 640px)" />
     <img src={img.mobile} alt="create and share" />
   </picture>
   <div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="128" height="6" viewBox="0 0 128 6">
+    <svg class="horizontal" width="128" height="6" viewBox="0 0 128 6">
       <defs>
         <linearGradient id="4gb3a" x1="0" x2="64" y1="6" y2="0" gradientUnits="userSpaceOnUse">
           <stop offset="0" stop-color="#ffc593" />
@@ -68,12 +110,26 @@
         </g>
       </g>
     </svg>
+    <svg class="vertical" width="6" height={link != 'none' ? 304 : 144}>
+      <defs>
+        <linearGradient id="ubcja" x1="0" x2="3" y1="304" y2="0" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stop-color="#ffc593" />
+          <stop offset=".52" stop-color="#bc7198" />
+          <stop offset="1" stop-color="#5a77ff" />
+        </linearGradient>
+      </defs>
+      <g>
+        <g>
+          <path fill="url(#ubcja)" d="M0 0h6v304H0z" />
+        </g>
+      </g>
+    </svg>
     <h1>{title}</h1>
     <p>{description}</p>
     {#if link != 'none'}
       <a href={link.path}>
         {link.title}
-        <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
+        <svg width="43" height="14">
           <g fill="none" fill-rule="evenodd" stroke="#efefef">
             <path d="M0 7h41.864M35.428 1l6 6-6 6" />
           </g>

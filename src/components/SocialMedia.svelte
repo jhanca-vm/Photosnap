@@ -32,6 +32,18 @@
   figure:hover .instagram path {
     fill: url(#i);
   }
+
+  @media only screen and (min-width: 640px) {
+    div {
+      margin: 0;
+      grid-column: 1;
+      grid-row: 3;
+    }
+
+    figure {
+      margin-right: 0.75rem;
+    }
+  }
 </style>
 
 <div>

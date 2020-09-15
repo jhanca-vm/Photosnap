@@ -40,6 +40,14 @@
     border: none;
     outline: none;
   }
+
+  @media only screen and (min-width: 640px) {
+    :global(h1, h2) {
+      font-size: 40px;
+      letter-spacing: 4.17px;
+      line-height: 48px;
+    }
+  }
 </style>
 
 <Header {segment} />

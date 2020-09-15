@@ -9,6 +9,7 @@
 </script>
 
 <script>
+  import CallToAction from '../../components/CallToAction.svelte';
   import Hero from '../../components/Hero.svelte';
   import Plans from '../../components/Plans.svelte';
   import PlansDescription from '../../components/PlansDescription.svelte';
@@ -35,4 +36,5 @@
   <Hero {img} {title} {description} link="none" />
   <Plans />
   <PlansDescription {plans} />
+  <CallToAction />
 </main>

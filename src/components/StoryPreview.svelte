@@ -1,4 +1,5 @@
 <script>
+  export let home;
   export let title;
   export let author;
   export let createdAt;
@@ -54,17 +55,16 @@
 
 <article>
   <picture>
-    <source srcset={img.desktop} media="(min-width: 1024px)" />
-    <source srcset={img.tablet} media="(min-width: 640px)" />
+    <source srcset={img.desktop} media="(min-width: 640px)" />
     <img src={img.mobile} alt={title} />
   </picture>
   <div>
-    <time datatime={time}>{createdAt}</time>
+    {#if home === false}<time datatime={time}>{createdAt}</time>{/if}
     <h3>{title}</h3>
     <p>by {author}</p>
     <div>
       <button>Read story</button>
-      <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">
+      <svg width="43" height="14">
         <g fill="none" fill-rule="evenodd" stroke="#efefef">
           <path d="M0 7h41.864M35.428 1l6 6-6 6" />
         </g>

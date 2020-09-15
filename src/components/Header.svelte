@@ -38,10 +38,12 @@
 
 <style>
   header {
+    max-width: 1024px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.75rem 1.5rem;
+    margin: 0 auto;
     position: relative;
   }
 
@@ -99,6 +101,66 @@
   [aria-current] {
     color: rgba(0, 0, 0, 0.3);
   }
+
+  @media only screen and (min-width: 640px) {
+    header {
+      padding: 1rem 1.5rem;
+    }
+
+    #icon {
+      display: none;
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 0;
+      position: static;
+    }
+
+    nav a {
+      max-width: 158px;
+      margin: 0;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    ul {
+      width: 37%;
+      max-width: 20rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 12px;
+      margin: 0 auto;
+      border: none;
+      box-sizing: initial;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    header {
+      padding: 1rem 2rem;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    ul {
+      padding-left: 0;
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    header {
+      padding: 1rem 0;
+    }
+  }
 </style>
 
 <header>
@@ -107,22 +169,22 @@
   <nav id="menu">
     <ul>
       <li>
-        <a
-          rel="prefetch"
-          aria-current={segment === 'stories' ? 'page' : undefined}
-          href="stories">Stories</a>
+        <a rel="prefetch" aria-current={segment === 'stories' ? 'page' : undefined} href="stories">
+          Stories
+        </a>
       </li>
       <li>
         <a
           rel="prefetch"
           aria-current={segment === 'features' ? 'page' : undefined}
-          href="features">Features</a>
+          href="features">
+          Features
+        </a>
       </li>
       <li>
-        <a
-          rel="prefetch"
-          aria-current={segment === 'pricing' ? 'page' : undefined}
-          href="pricing">Pricing</a>
+        <a rel="prefetch" aria-current={segment === 'pricing' ? 'page' : undefined} href="pricing">
+          Pricing
+        </a>
       </li>
     </ul>
     <a rel="prefetch" href="pricing">Get an invite</a>

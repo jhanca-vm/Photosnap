@@ -52,10 +52,45 @@
   [aria-current] {
     color: rgba(255, 255, 255, 0.3);
   }
+
+  @media only screen and (min-width: 640px) {
+    footer {
+      padding: 3.25rem 1.5rem 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    footer > a {
+      margin: 0;
+      grid-column: 2;
+      grid-row: 1;
+      justify-self: self-end;
+    }
+
+    ul {
+      display: flex;
+      margin: 2rem 0 4.75rem;
+    }
+
+    li {
+      margin: 0 1.5rem 0 0;
+    }
+
+    p {
+      grid-row: 3;
+      justify-self: self-end;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    footer {
+      padding: 3.25rem 2rem 3rem;
+    }
+  }
 </style>
 
 <footer>
-  <svg xmlns="http://www.w3.org/2000/svg" width="170" height="16">
+  <svg width="170" height="16">
     <defs>
       <linearGradient id="a" x1="0%" x2="50%" y1="85.457%" y2="14.543%">
         <stop offset="0%" stop-color="#FFC593" />
