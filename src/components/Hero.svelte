@@ -87,6 +87,20 @@
       padding: 4.75rem 3.25rem 4.5rem;
     }
   }
+
+  @media only screen and (min-width: 1280px) {
+    section {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    picture {
+      grid-column: span 3;
+    }
+
+    div {
+      padding: 4.75rem 4rem 4.5rem;
+    }
+  }
 </style>
 
 <section>

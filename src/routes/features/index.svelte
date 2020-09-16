@@ -48,6 +48,17 @@
       padding: 5.75rem 2rem 6rem;
     }
   }
+
+  @media only screen and (min-width: 1280px) {
+    section {
+      max-width: 1024px;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 2.25rem;
+      row-gap: 5rem;
+      margin: 0 auto;
+      padding: 6rem 0rem 7.5rem;
+    }
+  }
 </style>
 
 <svelte:head>

@@ -80,7 +80,13 @@
   @media only screen and (min-width: 768px) {
     div {
       max-width: 445px;
-      padding: 0rem 2rem;
+      padding: 0rem 2rem 0.5rem;
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    div {
+      margin-left: 4rem;
     }
   }
 </style>

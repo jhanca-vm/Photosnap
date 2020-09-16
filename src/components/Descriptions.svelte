@@ -89,6 +89,22 @@
       padding: 0 4rem;
     }
   }
+
+  @media only screen and (min-width: 1280px) {
+    article {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    article div {
+      max-width: 390px;
+      justify-self: center;
+      padding: 0;
+    }
+
+    picture {
+      grid-column: span 3;
+    }
+  }
 </style>
 
 <section>

@@ -105,6 +105,14 @@
       padding-left: 2rem;
     }
   }
+
+  @media only screen and (min-width: 1024px) {
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 0 7rem;
+    }
+  }
 </style>
 
 <section>

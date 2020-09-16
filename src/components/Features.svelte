@@ -37,6 +37,13 @@
       justify-self: center;
     }
   }
+
+  @media only screen and (min-width: 1280px) {
+    div {
+      align-self: center;
+      margin: 0;
+    }
+  }
 </style>
 
 {#each features as { title, description, img }}

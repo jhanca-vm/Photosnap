@@ -44,6 +44,13 @@
       margin-right: 0.75rem;
     }
   }
+
+  @media only screen and (min-width: 1280px) {
+    div {
+      grid-row: 2;
+      align-self: flex-end;
+    }
+  }
 </style>
 
 <div>

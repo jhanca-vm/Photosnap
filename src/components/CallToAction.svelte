@@ -61,6 +61,16 @@
       padding: 0 2.5rem;
     }
   }
+
+  @media only screen and (min-width: 1280px) {
+    div {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 0;
+      left: 0;
+      right: 0;
+    }
+  }
 </style>
 
 <section>

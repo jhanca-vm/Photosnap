@@ -49,7 +49,22 @@
     }
 
     .features {
-      padding: 5.75rem 0rem;
+      padding: 5.75rem 0;
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    .stories {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .features {
+      max-width: 1024px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 2.25rem;
+      margin: 0 auto;
+      padding: 5.5rem 0 6.5rem;
     }
   }
 </style>

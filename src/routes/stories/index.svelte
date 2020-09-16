@@ -22,6 +22,12 @@
       grid-template-columns: 1fr 1fr;
     }
   }
+
+  @media only screen and (min-width: 1280px) {
+    section {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 </style>
 
 <svelte:head>

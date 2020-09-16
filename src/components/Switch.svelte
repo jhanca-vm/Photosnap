@@ -52,6 +52,15 @@
   .desactived {
     opacity: 0.5;
   }
+
+  @media only screen and (min-width: 1280px) {
+    div {
+      width: 100%;
+      grid-column: span 3;
+      justify-self: center;
+      margin: 0 auto 3.25rem;
+    }
+  }
 </style>
 
 <div>

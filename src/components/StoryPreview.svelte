@@ -42,6 +42,7 @@
     margin-top: 1.25rem;
     padding-top: 1.5rem;
     border-top: 1px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
   }
 
   button {
@@ -50,6 +51,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     color: inherit;
+    cursor: pointer;
   }
 </style>
 

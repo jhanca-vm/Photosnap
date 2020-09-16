@@ -121,6 +121,57 @@
       margin: 1.75rem 0;
     }
   }
+
+  @media only screen and (min-width: 1280px) {
+    section {
+      max-width: 1024px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 2rem;
+      margin: 0 auto;
+      padding: 7rem 0;
+    }
+
+    article {
+      display: block;
+      text-align: center;
+    }
+
+    article p {
+      margin: 0 auto;
+    }
+
+    article > span {
+      margin-top: 2.25rem;
+      text-align: center;
+    }
+
+    article button {
+      width: 100%;
+    }
+
+    .dark-card {
+      height: 445px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    .light-card {
+      height: fit-content;
+      align-self: center;
+    }
+
+    .h-p {
+      display: block;
+    }
+
+    .v-p {
+      display: none;
+    }
+  }
 </style>
 
 <section>
@@ -132,7 +183,7 @@
     <button>Pick plan</button>
   </article>
   <article class="dark-card">
-    <svg class="horizontal" width="100%" height="6">
+    <svg class="horizontal h-p" width="100%" height="6">
       <defs>
         <linearGradient id="180ta" x1="0" x2="159" y1="6" y2="0" gradientUnits="userSpaceOnUse">
           <stop offset="0" stop-color="#ffc593" />
@@ -146,7 +197,7 @@
         </g>
       </g>
     </svg>
-    <svg class="vertical" width="6" height="100%">
+    <svg class="vertical v-p" width="6" height="100%">
       <defs>
         <linearGradient id="ubcja" x1="0" x2="3" y1="304" y2="0" gradientUnits="userSpaceOnUse">
           <stop offset="0" stop-color="#ffc593" />
