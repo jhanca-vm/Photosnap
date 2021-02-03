@@ -1,83 +1,8 @@
-<style>
-  section {
-    position: relative;
-  }
-
-  section > svg {
-    position: absolute;
-    top: 0;
-    left: 1.5rem;
-  }
-
-  div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 1.5rem;
-    color: white;
-    position: absolute;
-    top: 0;
-  }
-
-  div a {
-    display: flex;
-    align-items: center;
-    margin-top: 1.75rem;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: white;
-  }
-
-  div a:hover {
-    text-decoration: underline;
-  }
-
-  div svg {
-    margin-left: 1.25rem;
-  }
-
-  @media only screen and (min-width: 640px) {
-    section > svg {
-      left: 0;
-    }
-
-    h2 {
-      max-width: 412px;
-    }
-
-    div {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
-
-  @media only screen and (min-width: 768px) {
-    div {
-      padding: 0 2.5rem;
-    }
-  }
-
-  @media only screen and (min-width: 1280px) {
-    div {
-      max-width: 1024px;
-      margin: 0 auto;
-      padding: 0;
-      left: 0;
-      right: 0;
-    }
-  }
-</style>
-
 <section>
   <picture>
-    <source srcset="assets/shared/desktop/bg-beta.jpg" media="(min-width: 1280px)" />
-    <source srcset="assets/shared/tablet/bg-beta.jpg" media="(min-width: 640px)" />
-    <img src="assets/shared/mobile/bg-beta.jpg" alt="background" />
+    <source srcset="https://imgur.com/m1DuXFo.jpg" media="(min-width: 1280px)" />
+    <source srcset="https://imgur.com/SbLqdwX.jpg" media="(min-width: 640px)" />
+    <img src="https://imgur.com/832B69M.jpg" alt="background" />
   </picture>
   <svg width="128" height="6" viewBox="0 0 128 6">
     <defs>
@@ -118,3 +43,78 @@
     </a>
   </div>
 </section>
+
+<style>
+  section {
+    position: relative;
+  }
+
+  section > svg {
+    left: 24px;
+    position: absolute;
+    top: 0;
+  }
+
+  div {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding: 0 24px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  div a {
+    align-items: center;
+    color: white;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    margin-top: 28px;
+    text-transform: uppercase;
+  }
+
+  div a:hover {
+    text-decoration: underline;
+  }
+
+  div svg {
+    margin-left: 20px;
+  }
+
+  @media only screen and (min-width: 640px) {
+    section > svg {
+      left: 0;
+    }
+
+    h2 {
+      max-width: 412px;
+    }
+
+    div {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    div {
+      padding: 0 40px;
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    div {
+      left: 0;
+      margin: 0 auto;
+      max-width: 1024px;
+      padding: 0;
+      right: 0;
+    }
+  }
+</style>

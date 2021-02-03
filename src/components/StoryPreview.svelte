@@ -1,69 +1,18 @@
-<script>
-  export let home;
-  export let title;
-  export let author;
-  export let createdAt;
-  export let time;
-  export let img;
+<script lang="ts">
+  import type { Story } from '../types';
+
+  export let story: Story, home: boolean;
 </script>
-
-<style>
-  article {
-    color: white;
-    position: relative;
-  }
-
-  h3 {
-    margin: 0.65rem 0 0.5rem;
-    font-size: 18px;
-  }
-
-  p,
-  time {
-    font-size: 13px;
-  }
-
-  article > div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 2.75rem 2.25rem;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.66) 100%);
-    position: absolute;
-    top: 0;
-  }
-
-  article div div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1.25rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
-    cursor: pointer;
-  }
-
-  button {
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: inherit;
-    cursor: pointer;
-  }
-</style>
 
 <article>
   <picture>
-    <source srcset={img.desktop} media="(min-width: 640px)" />
-    <img src={img.mobile} alt={title} />
+    <source srcset="{story.imgDesktop}.jpg" media="(min-width: 640px)" />
+    <img src="{story.imgMobile}.jpg" alt={story.title} />
   </picture>
   <div>
-    {#if home === false}<time datatime={time}>{createdAt}</time>{/if}
-    <h3>{title}</h3>
-    <p>by {author}</p>
+    {#if home === false}<span>{story.createdAt}</span>{/if}
+    <h3>{story.title}</h3>
+    <p>by {story.author}</p>
     <div>
       <button>Read story</button>
       <svg width="43" height="14">
@@ -74,3 +23,51 @@
     </div>
   </div>
 </article>
+
+<style>
+  article {
+    color: white;
+    position: relative;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    margin: 10.5px 0 8px;
+  }
+
+  p,
+  span {
+    font-size: 1.3rem;
+  }
+
+  article > div {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.66) 100%);
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 44px 36px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  article div div {
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  button {
+    color: inherit;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+</style>

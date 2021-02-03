@@ -1,178 +1,6 @@
-<script>
+<script lang="ts">
   import Switch from './Switch.svelte';
 </script>
-
-<style>
-  section {
-    padding: 4rem 1.5rem;
-  }
-
-  h3 {
-    font-size: 24px;
-    margin-bottom: 1rem;
-  }
-
-  p,
-  small {
-    line-height: 25px;
-    opacity: 0.6;
-  }
-
-  svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  article {
-    padding: 3rem 1.25rem;
-    text-align: center;
-  }
-
-  article > span {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2.25rem;
-  }
-
-  article span span {
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 4.17px;
-  }
-
-  article button {
-    width: 87%;
-    height: 40px;
-    margin-top: 2.25rem;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
-  }
-
-  article button:hover {
-    background-color: #dfdfdf;
-    color: black;
-  }
-
-  .light-card {
-    background-color: #f5f5f5;
-  }
-
-  .light-card button {
-    background-color: black;
-    color: white;
-  }
-
-  .dark-card {
-    margin: 1.5rem 0;
-    background-color: black;
-    color: white;
-    position: relative;
-  }
-
-  .dark-card button {
-    background-color: white;
-    color: black;
-  }
-
-  @media only screen and (min-width: 640px) {
-    section {
-      padding: 5rem 1.5rem;
-    }
-
-    article {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      padding: 3rem 2.25rem;
-      text-align: left;
-    }
-
-    article > span {
-      grid-column: 2;
-      grid-row: 1;
-      margin: 0;
-      text-align: right;
-    }
-
-    article p {
-      max-width: 270px;
-      margin-top: -25px;
-    }
-
-    article button {
-      max-width: 270px;
-      grid-column: 1;
-    }
-
-    .horizontal {
-      display: none;
-    }
-  }
-
-  @media only screen and (min-width: 768px) {
-    section {
-      padding: 5rem 2rem;
-    }
-
-    .dark-card {
-      margin: 1.75rem 0;
-    }
-  }
-
-  @media only screen and (min-width: 1280px) {
-    section {
-      max-width: 1024px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 2rem;
-      margin: 0 auto;
-      padding: 7rem 0;
-    }
-
-    article {
-      display: block;
-      text-align: center;
-    }
-
-    article p {
-      margin: 0 auto;
-    }
-
-    article > span {
-      margin-top: 2.25rem;
-      text-align: center;
-    }
-
-    article button {
-      width: 100%;
-    }
-
-    .dark-card {
-      height: 445px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-    }
-
-    .light-card {
-      height: fit-content;
-      align-self: center;
-    }
-
-    .h-p {
-      display: block;
-    }
-
-    .v-p {
-      display: none;
-    }
-  }
-</style>
 
 <section>
   <Switch />
@@ -225,3 +53,175 @@
     <button>Pick plan</button>
   </article>
 </section>
+
+<style>
+  section {
+    padding: 64px 24px;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+    margin-bottom: 16px;
+  }
+
+  p,
+  small {
+    line-height: 2.5rem;
+    opacity: 0.6;
+  }
+
+  svg {
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  article {
+    padding: 48px 20px;
+    text-align: center;
+  }
+
+  article > span {
+    display: flex;
+    flex-direction: column;
+    margin-top: 36px;
+  }
+
+  article span span {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 0.417rem;
+  }
+
+  article button {
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    height: 40px;
+    letter-spacing: 0.2rem;
+    margin-top: 36px;
+    text-transform: uppercase;
+    width: 87%;
+  }
+
+  article button:hover {
+    background-color: #dfdfdf;
+    color: black;
+  }
+
+  .light-card {
+    background-color: #f5f5f5;
+  }
+
+  .light-card button {
+    background-color: black;
+    color: white;
+  }
+
+  .dark-card {
+    background-color: black;
+    color: white;
+    margin: 24px 0;
+    position: relative;
+  }
+
+  .dark-card button {
+    background-color: white;
+    color: black;
+  }
+
+  @media only screen and (min-width: 640px) {
+    section {
+      padding: 80px 24px;
+    }
+
+    article {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 48px 36px;
+      text-align: left;
+    }
+
+    article > span {
+      grid-column: 2;
+      grid-row: 1;
+      margin: 0;
+      text-align: right;
+    }
+
+    article p {
+      margin-top: -25px;
+      max-width: 270px;
+    }
+
+    article button {
+      grid-column: 1;
+      max-width: 270px;
+    }
+
+    .horizontal {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    section {
+      padding: 80px 32px;
+    }
+
+    .dark-card {
+      margin: 28px 0;
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    section {
+      column-gap: 32px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0 auto;
+      max-width: 1024px;
+      padding: 112px 0;
+    }
+
+    article {
+      display: block;
+      text-align: center;
+    }
+
+    article p {
+      margin: 0 auto;
+    }
+
+    article > span {
+      margin-top: 36px;
+      text-align: center;
+    }
+
+    article button {
+      width: 100%;
+    }
+
+    .dark-card {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 445px;
+      justify-content: center;
+      margin: 0;
+    }
+
+    .light-card {
+      align-self: center;
+      height: fit-content;
+    }
+
+    .h-p {
+      display: block;
+    }
+
+    .v-p {
+      display: none;
+    }
+  }
+</style>

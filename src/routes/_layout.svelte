@@ -1,54 +1,23 @@
-<script>
-  import Footer from '../components/Footer.svelte';
+<script lang="ts">
+  import { onMount } from 'svelte';
+  import { stories, features, plans } from '../stores';
   import Header from '../components/Header.svelte';
+  import Footer from '../components/Footer.svelte';
 
-  export let segment;
+  export let segment: string;
+
+  onMount(() => {
+    Promise.all([
+      fetch('https://photosnap.fly.dev/stories').then(res => res.json()),
+      fetch('https://photosnap.fly.dev/features').then(res => res.json()),
+      fetch('https://photosnap.fly.dev/plans').then(res => res.json()),
+    ]).then(results => {
+      stories.setData(results[0]);
+      features.setData(results[1]);
+      plans.setData(results[2]);
+    });
+  });
 </script>
-
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
-
-  :global(*) {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-  }
-
-  :global(h1, h2) {
-    font-size: 32px;
-    text-transform: uppercase;
-    letter-spacing: 3.33px;
-    line-height: 40px;
-  }
-
-  :global(a) {
-    text-decoration: none;
-  }
-
-  :global(picture) {
-    display: flex;
-  }
-
-  :global(picture img) {
-    width: 100%;
-  }
-
-  :global(button) {
-    background: none;
-    border: none;
-    outline: none;
-  }
-
-  @media only screen and (min-width: 640px) {
-    :global(h1, h2) {
-      font-size: 40px;
-      letter-spacing: 4.17px;
-      line-height: 48px;
-    }
-  }
-</style>
 
 <Header {segment} />
 <slot />

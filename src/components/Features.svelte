@@ -1,15 +1,26 @@
-<script>
-  export let features;
-  export let home;
+<script lang="ts">
+  import type { Feature } from '../types';
+
+  export let features: Feature[], home: boolean;
 </script>
+
+{#each features as { name, description, img }}
+  <div class:reset={home === false}>
+    <figure>
+      {@html img}
+    </figure>
+    <h3>{name}</h3>
+    <p>{description}</p>
+  </div>
+{/each}
 
 <style>
   div {
-    max-width: 457px;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 0 auto 4.25rem;
+    max-width: 457px;
+    margin: 0 auto 68px;
   }
 
   div:last-of-type {
@@ -17,24 +28,24 @@
   }
 
   div h3 {
-    margin: 2.5rem 0 1.25rem;
-    font-size: 18px;
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
   }
 
   div p {
-    line-height: 25px;
+    line-height: 2.5rem;
     opacity: 0.6;
   }
 
   @media only screen and (min-width: 640px) {
     div {
-      margin: 0 auto 4.75rem;
+      margin: 0 auto 76px;
     }
 
     .reset {
-      margin: 0;
       align-self: center;
       justify-self: center;
+      margin: 0;
     }
   }
 
@@ -43,13 +54,11 @@
       align-self: center;
       margin: 0;
     }
+
+    div figure {
+      align-items: center;
+      display: flex;
+      min-height: 72px;
+    }
   }
 </style>
-
-{#each features as { title, description, img }}
-  <div class:reset={home === false}>
-    <figure><img src={img} alt={title} /></figure>
-    <h3>{title}</h3>
-    <p>{description}</p>
-  </div>
-{/each}

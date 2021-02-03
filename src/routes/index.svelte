@@ -1,44 +1,47 @@
-<script context="module">
-  export function preload({ params, query }) {
-    return this.fetch(`index.json`)
-      .then(r => r.json())
-      .then(data => {
-        return { data };
-      });
-  }
-</script>
-
-<script>
+<script lang="ts">
+  import { stories, features } from '../stores';
   import Hero from '../components/Hero.svelte';
   import Descriptions from '../components/Descriptions.svelte';
   import StoryPreview from '../components/StoryPreview.svelte';
   import Features from '../components/Features.svelte';
 
-  export let data;
+  const title = 'Create and share your photo stories.';
 
-  let stories = data.stories;
-  let features = data.features;
+  const description =
+    'Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.';
 
-  let img = {
-    mobile: 'assets/home/mobile/create-and-share.jpg',
-    tablet: 'assets/home/tablet/create-and-share.jpg',
-    desktop: 'assets/home/desktop/create-and-share.jpg',
+  const img = {
+    mobile: 'https://imgur.com/JyRdmRa.jpg',
+    tablet: 'https://imgur.com/hLCXIhL.jpg',
+    desktop: 'https://imgur.com/jhwZJ1v.jpg',
   };
 
-  let link = {
+  const link = {
     title: 'Get an invite',
     path: 'pricing',
   };
-
-  let title = 'Create and share your photo stories.';
-
-  let description =
-    'Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.';
 </script>
+
+<svelte:head>
+  <title>Photosnap</title>
+</svelte:head>
+
+<main>
+  <Hero {img} {title} {description} {link} />
+  <Descriptions />
+  <section class="stories">
+    {#each $stories.slice(0, 4) as story}
+      <StoryPreview {story} home={true} />
+    {/each}
+  </section>
+  <section class="features">
+    <Features features={$features.slice(0, 3)} home={true} />
+  </section>
+</main>
 
 <style>
   .features {
-    padding: 4.75rem 2.25rem;
+    padding: 76px 36px;
     text-align: center;
   }
 
@@ -49,7 +52,7 @@
     }
 
     .features {
-      padding: 5.75rem 0;
+      padding: 92px 0;
     }
   }
 
@@ -59,29 +62,12 @@
     }
 
     .features {
-      max-width: 1024px;
+      column-gap: 2.25rem;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      column-gap: 2.25rem;
       margin: 0 auto;
-      padding: 5.5rem 0 6.5rem;
+      max-width: 1024px;
+      padding: 100px 0 150px;
     }
   }
 </style>
-
-<svelte:head>
-  <title>Photosnap</title>
-</svelte:head>
-
-<main>
-  <Hero {img} {title} {description} {link} />
-  <Descriptions />
-  <section class="stories">
-    {#each stories as story}
-      <StoryPreview {...story} home={true} />
-    {/each}
-  </section>
-  <section class="features">
-    <Features {features} home={true} />
-  </section>
-</main>

@@ -3,7 +3,7 @@
 Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.
 
 ![](https://i.imgur.com/nzd9Sx5.jpg)
-*[Frontend Mentor Challenge](https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW) developed with [Svelte](https://svelte.dev/) and [Sapper](https://sapper.svelte.dev/)*
+_[Frontend Mentor Challenge](https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW) developed with [Svelte](https://svelte.dev/), [Sapper](https://sapper.svelte.dev/) and [Deno](https://deno.land/)_
 
 ## Project setup
 

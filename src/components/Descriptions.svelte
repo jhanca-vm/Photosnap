@@ -1,14 +1,14 @@
-<script>
-  let data = [
+<script lang="ts">
+  const data = [
     {
       id: 'first',
       title: 'Beautiful stories every time',
       description:
         'We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.',
       img: {
-        desktop: 'assets/home/desktop/beautiful-stories.jpg',
-        tablet: 'assets/home/tablet/beautiful-stories.jpg',
-        mobile: 'assets/home/mobile/beautiful-stories.jpg',
+        desktop: 'https://imgur.com/lQ7MxIV.jpg',
+        tablet: 'https://imgur.com/TtAjtfw.jpg',
+        mobile: 'https://imgur.com/xzb46xr.jpg',
       },
     },
     {
@@ -17,95 +17,13 @@
       description:
         'Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it. ',
       img: {
-        desktop: 'assets/home/desktop/designed-for-everyone.jpg',
-        tablet: 'assets/home/tablet/designed-for-everyone.jpg',
-        mobile: 'assets/home/mobile/designed-for-everyone.jpg',
+        desktop: 'https://imgur.com/yvVCMFi.jpg',
+        tablet: 'https://imgur.com/5lqNWCI.jpg',
+        mobile: 'https://imgur.com/6tSvkIL.jpg',
       },
     },
   ];
 </script>
-
-<style>
-  div {
-    padding: 4rem 1.5rem 4.5rem;
-  }
-
-  div p {
-    margin: 1rem 0 1.25rem;
-    line-height: 25px;
-    opacity: 0.6;
-  }
-
-  div a {
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: black;
-  }
-
-  div a:hover {
-    text-decoration: underline;
-  }
-
-  div svg {
-    margin-left: 1.25rem;
-  }
-
-  @media only screen and (min-width: 640px) {
-    article {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 2.5rem;
-      grid-column: span 2;
-    }
-
-    div a {
-      margin-top: 3rem;
-    }
-
-    .second {
-      grid-column: 1 / 3;
-      grid-row: 1;
-    }
-  }
-
-  @media only screen and (min-width: 768px) {
-    div {
-      padding: 0 3.25rem;
-    }
-  }
-
-  @media only screen and (min-width: 1024px) {
-    div {
-      padding: 0 4rem;
-    }
-  }
-
-  @media only screen and (min-width: 1280px) {
-    article {
-      grid-template-columns: repeat(5, 1fr);
-    }
-
-    article div {
-      max-width: 390px;
-      justify-self: center;
-      padding: 0;
-    }
-
-    picture {
-      grid-column: span 3;
-    }
-  }
-</style>
 
 <section>
   {#each data as { id, title, description, img }}
@@ -129,3 +47,85 @@
     </article>
   {/each}
 </section>
+
+<style>
+  div {
+    padding: 64px 24px 72px;
+  }
+
+  div p {
+    line-height: 2.5rem;
+    margin: 16px 0 20px;
+    opacity: 0.6;
+  }
+
+  div a {
+    align-items: center;
+    color: black;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+
+  div a:hover {
+    text-decoration: underline;
+  }
+
+  div svg {
+    margin-left: 20px;
+  }
+
+  @media only screen and (min-width: 640px) {
+    article {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      grid-column: span 2;
+      justify-content: center;
+      padding: 0 40px;
+    }
+
+    div a {
+      margin-top: 48px;
+    }
+
+    .second {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    div {
+      padding: 0 52px;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    div {
+      padding: 0 64px;
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    article {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    article div {
+      justify-self: center;
+      max-width: 390px;
+      padding: 0;
+    }
+
+    picture {
+      grid-column: span 3;
+    }
+  }
+</style>

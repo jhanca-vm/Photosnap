@@ -1,101 +1,8 @@
-<style>
-  div {
-    padding: 2.75rem 1.5rem 3.25rem;
-    background-color: black;
-    color: white;
-  }
-
-  div h1 {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3.5rem;
-  }
-
-  div h1 small {
-    margin-bottom: 0.5rem;
-    font-size: 12px;
-    letter-spacing: 2px;
-  }
-
-  div > p {
-    margin: 1.75rem 0;
-    line-height: 25px;
-    opacity: 0.6;
-  }
-
-  span {
-    display: flex;
-  }
-
-  span p,
-  time {
-    font-size: 13px;
-  }
-
-  span time {
-    opacity: 0.75;
-    margin-right: 1.25rem;
-  }
-
-  button {
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: white;
-  }
-
-  button:hover {
-    text-decoration: underline;
-    cursor: pointer;
-  }
-
-  button svg {
-    margin-left: 1.25rem;
-  }
-
-  @media only screen and (min-width: 640px) {
-    section {
-      position: relative;
-    }
-
-    div {
-      max-width: 435px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-color: initial;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-    }
-
-    div h1 {
-      margin-bottom: 1rem;
-    }
-  }
-
-  @media only screen and (min-width: 768px) {
-    div {
-      max-width: 445px;
-      padding: 0rem 2rem 0.5rem;
-    }
-  }
-
-  @media only screen and (min-width: 1280px) {
-    div {
-      margin-left: 4rem;
-    }
-  }
-</style>
-
 <section>
   <picture>
-    <source srcset="assets/stories/desktop/moon-of-appalacia.jpg" media="(min-width: 1280px)" />
-    <source srcset="assets/stories/tablet/moon-of-appalacia.jpg" media="(min-width: 640px)" />
-    <img src="assets/stories/mobile/moon-of-appalacia.jpg" alt="moon of appalachia" />
+    <source srcset="https://imgur.com/2QG0Qg9.jpg" media="(min-width: 1280px)" />
+    <source srcset="https://imgur.com/O2beHrv.jpg" media="(min-width: 640px)" />
+    <img src="https://imgur.com/DtObyxn.jpg" alt="moon of appalachia" />
   </picture>
   <div>
     <h1><small>Last month's featured story</small>Hazy full moon of appalachia</h1>
@@ -117,3 +24,96 @@
     </button>
   </div>
 </section>
+
+<style>
+  div {
+    background-color: black;
+    color: white;
+    padding: 44px 24px 52px;
+  }
+
+  div h1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 56px;
+  }
+
+  div h1 small {
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 8px;
+  }
+
+  div > p {
+    line-height: 2.5rem;
+    margin: 28px 0;
+    opacity: 0.6;
+  }
+
+  span {
+    display: flex;
+  }
+
+  span p,
+  time {
+    font-size: 1.3rem;
+  }
+
+  span time {
+    margin-right: 20px;
+    opacity: 0.75;
+  }
+
+  button {
+    align-items: center;
+    color: white;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+
+  button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  button svg {
+    margin-left: 20px;
+  }
+
+  @media only screen and (min-width: 640px) {
+    section {
+      position: relative;
+    }
+
+    div {
+      display: flex;
+      background-color: initial;
+      bottom: 0;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 435px;
+      position: absolute;
+      top: 0;
+    }
+
+    div h1 {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    div {
+      max-width: 445px;
+      padding: 0 32px 8px;
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    div {
+      margin-left: 64px;
+    }
+  }
+</style>
